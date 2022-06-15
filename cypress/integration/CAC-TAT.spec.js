@@ -53,7 +53,7 @@ describe('Central de Atendimento ao Cliente TAT', () => {
             .type('Tiagão')
             .should('have.value', 'Tiagão')
             .clear()
-            .should('have.value', 'fssfs')
+            .should('have.value', '')
         
         cy.get('#lastName')
             .type('Lopes')
@@ -76,7 +76,7 @@ describe('Central de Atendimento ao Cliente TAT', () => {
 
     it('Tenta submeter o formulário sem preencher nada', () => {
         cy.contains('button', 'Enviar').click()
-        cy.get('.error').should('be.visible').and('contain', 'Validess os campos obrigatórios')
+        cy.get('.error').should('be.visible').and('contain', 'Valide os campos obrigatórios')
     })
 
     it('Preenche e submete o formulário usando um comando customizado', () => {
@@ -92,7 +92,7 @@ describe('Central de Atendimento ao Cliente TAT', () => {
         it('Seleciona um produto (Youtube) pelo seu texto', () => {
             cy.get('#product')
                 .select('YouTube')
-                .should('have.value', 'you//tube')
+                .should('have.value', 'youtube')
         })
     
         it('Seleciona um produto (Mentoria) pelo seu valor (value)', () => {
@@ -138,7 +138,7 @@ describe('Central de Atendimento ao Cliente TAT', () => {
             cy.get('#file-upload')
                 .selectFile('cypress/fixtures/example.json')
                 .then($el => {
-                    expect($el[0].files[0].name).to.be.equal('examfffple.json')
+                    expect($el[0].files[0].name).to.be.equal('example.json')
                 })
         })
 
