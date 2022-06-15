@@ -2,28 +2,38 @@
 
 👋 Seja bem-vindo(a)!
 
-É muito bom tê-lo(a) aqui. Tenho certeza que você vai adorar este curso. ❤️
+Esse projeto foi baseado no curso [Testes Automatizados com Cypress - Básico](https://www.udemy.com/course/testes-automatizados-com-cypress-basico/) criado pelo [Walmyr](https://github.com/wlsf82).
 
-## O que você vai aprender
+## Objetivos do projeto
 
-Durante o curso de testes automatizados com Cypress (básico), você vai aprender:
+O objetivo do projeto é criar testes para um formulário simples e explorar as funcionalidades básicas do [Cypress](https://docs.cypress.io).
 
-- Como configurar um projeto Cypress do zero
-- Como visitar páginas locais e remotas
-- Como lidar com os elementos mais comuns encontrados em aplicações web
-- Como testar _upload_ de arquivos
-- Como realizar as mais diversas verificações de resultados esperados
-- Como criar comandos customizados
+  Testes realizados:
+
+- Preenchimento dos campos de Texto
+- Selecionando *radio buttons*
+- Marcando e desmarcando *checkbox*
+
+- Validação da obrigatoriedade de campos
+
+- *Upload* de arquivos
+
 - Como lidar com links que abrem em outra aba do navegador
-- Como rodar testes simulando as dimensões de um dispositivo móvel
-- Como resolver os mesmos problemas de diferentes formas, conhecendo a [API do Cypress](https://docs.cypress.io/api/table-of-contents)
-- Como executar os testes em um _pipeline_ de integração contínua sempre que mudanças ocorrerem no código da aplicação (ou dos testes)
-- Como criar uma documentação mínima para seu projeto de testes automatizados
 
-## Vamos começar?
+- Testando a aplicação simulando um dispositivo mobile
 
-Vá para a seção [estrutura do curso](./lessons/_course-structure_.md).
+## Como executar o projeto
 
-___
+- É necessário ter instalado o [Node](https://nodejs.org/pt-br/) na sua máquina.
+- Clonar o repositório em sua máquina
+`git clone https://github.com/Tiago0Br/cypress-basico-v2.git`
+- Instalar as dependências do projeto com `npm install`
+- Para abrir a interface do Cypress execute o comando `npm run cy:open`
 
-Este é mais um curso da [**Escola Talking About Testing**](https://udemy.com/user/walmyr).
+### Execução dos testes em modo *headless*
+
+    npm run cy:run
+
+### Execução dos testes simulando um dispositivo mobile
+- Para abrir a interface do Cypress, execute `npm run cy:open:mobile`
+- Para executar os testes em modo *headless*, execute `npm run cy:run:mobile`
